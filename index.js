@@ -1,17 +1,19 @@
 const { app, BrowserWindow } = require('electron')
 
-function createWindow () {   
+function createWindow() {
   // 创建浏览器窗口
   const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      // 添加 contextIsolation 才能在 js 文件 中使用 require
+      contextIsolation: false,
     }
   })
 
   // 并且为你的应用加载index.html
-  win.loadFile('index.html')
+  win.loadFile('index.html').then(r => console.log('init html'))
 
   // 打开开发者工具
   win.webContents.openDevTools()
@@ -38,6 +40,3 @@ app.on('activate', () => {
     createWindow()
   }
 })
-
-// In this file you can include the rest of your app's specific main process
-// code. 也可以拆分成几个文件，然后用 require 导入。

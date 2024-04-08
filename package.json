@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "node index.js"
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^21.2.2"
   },
+  "dependencies": {
+    "bip39": "^3.1.0",
+    "ethereumjs-wallet": "^1.0.2",
+    "exceljs": "^4.3.0"
+  },
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "test": "node index.js"
   }
 }

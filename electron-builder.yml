@@ -1,0 +1,20 @@
+
+# 包名
+appId: "com.jazz.btc"
+# app 名
+productName: "工具集"
+description: "electron mac 工具"
+
+directories:
+  # 指定打包需要的静态资源，默认是build
+  buildResources: "build"
+  # 打包生成的目录，默认是dist
+  output: "dist"
+
+mac:
+  target: ["dmg"]
+
+dmg:
+  # 安装图标
+  "icon": "build/icons/icon.icns"
+

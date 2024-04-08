@@ -6,7 +6,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^21.2.2"
+    "electron": "^21.2.2",
+    "electron-icon-builder": "^2.0.1"
   },
   "dependencies": {
     "bip39": "^3.1.0",
@@ -15,6 +16,8 @@
   },
   "scripts": {
     "start": "electron .",
-    "test": "node index.js"
+    "test": "node index.js",
+    "build-icon": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
+    "package-app": "electron-builder"
   }
 }
